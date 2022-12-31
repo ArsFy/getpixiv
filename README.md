@@ -1,18 +1,17 @@
 # Get Pixiv
 
 ```
-npm i getpixiv
+npm i downloadpixiv
 ```
 
 -----
 
 ```javascript
-const getpixiv = require('getpixiv');
-const fs = require('fs');
+const dp = require('downloadpixiv');
 
-getpixiv.init(fs.readFileSync('./cookie'));
+dp.init('PHPSESSID=114514_sedghuashgiuesaghieg;');
 
-getpixiv.init(
+dp.get(
     '1919810',     // Pixiv ID
     './downloads/', // Downloads Path
     'filename'      // Filename (only name, does not contain ext)
